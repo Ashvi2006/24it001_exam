@@ -1,0 +1,23 @@
+
+import { useAuth } from "../context/AuthContext";
+import { useNavigate } from "react-router-dom";
+
+export default function Dashboard() {
+  const { user, logout } = useAuth();
+  const navigate = useNavigate();
+
+  function handleLogout() {
+    logout();
+    navigate("/login");
+  }
+
+  return (
+    <div className="dashboard">
+      <h1>QuickByte Dashboard</h1>
+      <p>Welcome, {user?.email}</p>
+      <p>You have accessed the protected page.</p>
+
+      <button onClick={handleLogout}>Logout</button>
+    </div>
+  );
+}

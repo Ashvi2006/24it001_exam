@@ -193,3 +193,47 @@ footer p {
     grid-template-columns: 1fr;
   }
 }
+
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 28px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: white;
+  color: #222;
+}
+
+.login-form input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.login-form button,
+.dashboard button {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.login-error {
+  color: #d62828;
+}
+
+.dashboard {
+  padding: 40px 20px;
+  text-align: center;
+}
+
